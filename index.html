@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>World Mosaic – Tagesstruktur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- Top-Leiste -->
+    <header class="top-row">
+      <div class="brand">
+        <div class="brand-title">
+          <span class="mosaic-dot" aria-hidden="true"></span>
+          WORLD MOSAIC
+        </div>
+        <div class="brand-subtitle">
+          Tagesstruktur als stilles Weltmosaik aus Zeit, Licht und Klang.
+        </div>
+      </div>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <button class="nav-link primary" type="button">
+          <span class="dot" aria-hidden="true"></span>
+          Start
+        </button>
+        <button class="nav-link" type="button">
+          <span class="dot" aria-hidden="true"></span>
+          Länder
+        </button>
+        <button class="nav-link" type="button">
+          <span class="dot" aria-hidden="true"></span>
+          Konzept
+        </button>
+        <button class="nav-link" type="button">
+          <span class="dot" aria-hidden="true"></span>
+          Über diese Seite
+        </button>
+      </nav>
+    </header>
+
+    <!-- Intro-Block -->
+    <section class="intro">
+      <div>
+        <h1 class="intro-main-title">
+          Eine Welt in vierzehn Fenstern.
+        </h1>
+        <p class="intro-main-subtitle">
+          Jeder Ort hat seinen eigenen Rhythmus: Morgenlicht in Lissabon, Neon-Nacht in Tokyo,
+          Nachmittagsschatten in Dakar. <br />
+          <strong>World Mosaic</strong> sammelt diese Momente – als ruhiges Dashboard, das sich mit den Zeitzonen bewegt.
+        </p>
+        <div class="intro-pill-row">
+          <div class="intro-pill">Zeitzonen als Farbe</div>
+          <div class="intro-pill">14 Länder als stille Kapitel</div>
+          <div class="intro-pill">Atmosphäre statt Reiseinformationen</div>
+        </div>
+      </div>
+      <aside class="intro-side">
+        <div class="intro-side-label">Modus</div>
+        <p class="intro-side-line">
+          <strong>Beobachten statt funktionieren:</strong> Die Karte zeigt keine Aufgaben, sondern Zustände.
+        </p>
+        <p class="intro-side-line">
+          <strong>Zeit als Textur:</strong> Dawn, Morning, Noon, Afternoon, Evening, Night –
+          jede Kachel wechselt die Stimmung mit der Uhrzeit ihres Ortes.
+        </p>
+      </aside>
+    </section>
+
+    <!-- Grid-Header -->
+    <div class="grid-header-row">
+      <div class="grid-title">Welt in 14 Fenstern</div>
+      <div class="grid-legend" aria-hidden="true">
+        <div class="legend-chip">
+          <span class="legend-swatch dawn"></span>Dämmerung
+        </div>
+        <div class="legend-chip">
+          <span class="legend-swatch morning"></span>Morgen
+        </div>
+        <div class="legend-chip">
+          <span class="legend-swatch noon"></span>Mittag
+        </div>
+        <div class="legend-chip">
+          <span class="legend-swatch afternoon"></span>Nachmittag
+        </div>
+        <div class="legend-chip">
+          <span class="legend-swatch evening"></span>Abend
+        </div>
+        <div class="legend-chip">
+          <span class="legend-swatch night"></span>Nacht
+        </div>
+      </div>
+    </div>
+
+    <!-- Länder-Grid -->
+    <section class="country-grid" aria-label="Länderübersicht">
+      <!-- 1: Italien -->
+      <article class="country-card"
+               data-tz="Europe/Rome"
+               data-location="Rom"
+               data-id="it">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Italien</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Rom</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇮🇹</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Warte auf das Licht.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Mittelmeer-Rhythmus</span>
+          <span>UTC+1 / +2</span>
+        </div>
+      </article>
+
+      <!-- 2: Japan -->
+      <article class="country-card"
+               data-tz="Asia/Tokyo"
+               data-location="Tokyo"
+               data-id="jp">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Japan</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Tokyo</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇯🇵</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Neon und stille Bahnsteige.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Insel der Züge</span>
+          <span>UTC+9</span>
+        </div>
+      </article>
+
+      <!-- 3: Portugal -->
+      <article class="country-card"
+               data-tz="Europe/Lisbon"
+               data-location="Lissabon"
+               data-id="pt">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Portugal</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Lissabon</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇵🇹</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Häuserkanten im Atlantiklicht.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Westlichster Rand</span>
+          <span>UTC / +1</span>
+        </div>
+      </article>
+
+      <!-- 4: Senegal -->
+      <article class="country-card"
+               data-tz="Africa/Dakar"
+               data-location="Dakar"
+               data-id="sn">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Senegal</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Dakar</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇸🇳</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Salziger Wind, ferne Musik.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Atlantikküste</span>
+          <span>UTC</span>
+        </div>
+      </article>
+
+      <!-- 5: Niederlande -->
+      <article class="country-card"
+               data-tz="Europe/Amsterdam"
+               data-location="Amsterdam"
+               data-id="nl">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Niederlande</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Amsterdam</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇳🇱</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Wasserlinien, Fahrräder, Himmel.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Flaches Land</span>
+          <span>UTC+1 / +2</span>
+        </div>
+      </article>
+
+      <!-- 6: Marokko -->
+      <article class="country-card"
+               data-tz="Africa/Casablanca"
+               data-location="Casablanca"
+               data-id="ma">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Marokko</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Casablanca</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇲🇦</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Zwischen Gassen, Gewürzen, Meer.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Tor zur Wüste</span>
+          <span>UTC / +1</span>
+        </div>
+      </article>
+
+      <!-- 7: Äthiopien -->
+      <article class="country-card"
+               data-tz="Africa/Addis_Ababa"
+               data-location="Addis Abeba"
+               data-id="et">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Äthiopien</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Addis Abeba</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇪🇹</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Hochlandluft und langsame Schritte.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Horn von Afrika</span>
+          <span>UTC+3</span>
+        </div>
+      </article>
+
+      <!-- 8: Deutschland -->
+      <article class="country-card"
+               data-tz="Europe/Berlin"
+               data-location="Berlin"
+               data-id="de">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Deutschland</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Berlin</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇩🇪</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Glas, Beton und leise Küchenfenster.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Eigene Zeitzone</span>
+          <span>UTC+1 / +2</span>
+        </div>
+      </article>
+
+      <!-- 9: USA (Portland / Oregon) -->
+      <article class="country-card"
+               data-tz="America/Los_Angeles"
+               data-location="Portland, OR"
+               data-id="us-or">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">USA – Oregon</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Portland</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇺🇸</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Nebel, Brücken, lange Morgen.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Weite Zeitzonen</span>
+          <span>UTC−8 / −7</span>
+        </div>
+      </article>
+
+      <!-- 10: Brasilien -->
+      <article class="country-card"
+               data-tz="America/Sao_Paulo"
+               data-location="São Paulo"
+               data-id="br">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Brasilien</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">São Paulo</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇧🇷</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Dichte Stadt, warme Nächte.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Südhalbkugel</span>
+          <span>UTC−3</span>
+        </div>
+      </article>
+
+      <!-- 11: Indien -->
+      <article class="country-card"
+               data-tz="Asia/Kolkata"
+               data-location="Kolkata"
+               data-id="in">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Indien</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Kolkata</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇮🇳</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Zwischen Rädern, Stimmen, Staub.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Halbe Stunden</span>
+          <span>UTC+5:30</span>
+        </div>
+      </article>
+
+      <!-- 12: Island -->
+      <article class="country-card"
+               data-tz="Atlantic/Reykjavik"
+               data-location="Reykjavík"
+               data-id="is">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Island</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Reykjavík</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇮🇸</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Kühle Luft, lange Schatten.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Nördliche Ränder</span>
+          <span>UTC</span>
+        </div>
+      </article>
+
+      <!-- 13: Südkorea -->
+      <article class="country-card"
+               data-tz="Asia/Seoul"
+               data-location="Seoul"
+               data-id="kr">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Südkorea</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Seoul</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇰🇷</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Bildschirme, Straßen, Kaffee.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Ostasien</span>
+          <span>UTC+9</span>
+        </div>
+      </article>
+
+      <!-- 14: Neuseeland -->
+      <article class="country-card"
+               data-tz="Pacific/Auckland"
+               data-location="Auckland"
+               data-id="nz">
+        <div class="country-header-row">
+          <div>
+            <div class="country-name">Neuseeland</div>
+            <div class="country-meta">
+              <span class="country-time js-time">--:--</span>
+              <span class="country-city">Auckland</span>
+              <span class="time-badge js-band-label">—</span>
+            </div>
+          </div>
+          <div class="country-flag" aria-hidden="true">🇳🇿</div>
+        </div>
+        <p class="country-tagline js-tagline">
+          Morgen, wenn hier noch Nacht ist.
+        </p>
+        <div class="country-footer">
+          <span><span class="dot"></span> Fast am Ende der Karte</span>
+          <span>UTC+12 / +13</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div>
+        <strong>World Mosaic</strong> ist eine ruhige Startseite:
+        keine Aufgabenliste, sondern eine Temperaturkarte der Welt in Momenten.
+      </div>
+      <div>
+        Idee, Texte &amp; Struktur: <strong>du</strong>.  
+        Layout: experimentell, anpassbar, GitHub-ready.
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
