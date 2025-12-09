@@ -14,7 +14,11 @@ Dort, ausgerechnet dort, stellte sich die Frage:
 Zunächst lokal gedacht,  
 dann philosophisch,  
 dann atmosphärisch —  
-und dann plötzlich **global**.  
+und dann plötzlich **global**. 
+
+Die Werkhalle wurde unfreiwillig zum *Portal* in ein weltweites, ästhetisches Beobachtungsprojekt.
+
+Niemand — am wenigsten die Werkhalle — hatte das kommen sehen. 
 
 ## Idee & Konzept
 
