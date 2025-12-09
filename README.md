@@ -8,7 +8,9 @@ nicht einmal an einem schönen Ort.
 Seine Entstehungsgeschichte wurde vielmehr von einer **muffigen Werkhalle** inspiriert.
 
 Dort, ausgerechnet dort, stellte sich die Frage:
+
 **Wie sieht eigentlich *Tagesstruktur* aus?**
+
 Zunächst lokal gedacht,  
 dann philosophisch,  
 dann atmosphärisch —  
