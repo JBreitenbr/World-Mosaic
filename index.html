@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Mosaic</title> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palatino">
+
+  
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <link rel="shortcut icon" href="Africa.ico">
+  </head>
+  <body>
+  <header>
+    <nav id="navbar">
+  <a href="index.html" id="act">Startseite</a>
+  <a href="japan.html">Kyoto</a>
+  <a href="indien.html">Lucknow</a>
+  <a href="oman.html">Sur</a>
+  <a href="aethiopien.html">Addis Abeba</a>
+  <a href="griechenland.html">Thessaloniki</a>
+  <a href="italien.html">Perugia</a>
+  <a href="deutschland.html">München</a>
+  <a href="niederlande.html">Amsterdam</a>
+  <a href="portugal.html">Lissabon</a>
+  <a href="marokko.html">Casablanca</a>
+  <a href="senegal.html">Saint Louis</a>
+  <a href="brasilien.html">São Paulo</a>
+  <a href="mexiko.html">Oaxaca</a>
+  <a href="usa.html">Portland</a>
+  </nav>   
+  </header>  
+  <main class="page">
+    <p><em><span>World Mosaic</span></em> sammelt <br> 
+       <i><strong id="day-rhythm">Tagesrhythmen aus aller Welt</strong></i> :<br><br>
+          ruhige, klare Miniaturen aus Städten, Landschaften, Hügeln, Treppen, Gassen,  
+          geschrieben im Stil nüchterner, kleiner Porträts.<br>
+          - Kein Drama.<br>
+          - Keine Tourismusästhetik.<br>  
+          - Keine Überhöhung.<br>
+          Nur Alltag als präzises kulturelles Mikroklima. </p>
+      <p id="toggle">Jede Seite zeigt:<br>
+          - eine Person<br>
+          - einen Ort<br>
+          - mehrere Zeitpunkte<br>
+          - eine Atmosphäre<br>
+          - ein <em>reduziertes lokales Design</em> (Farben, Texturen, Icons)<br><br>
+          So entsteht ein <em><strong>globales Mosaik</strong></em>,  
+          gebaut aus den unspektakulären Momenten,  
+          die am ehrlichsten von einer Kultur erzählen.</p>
+    <div id="tooltip"></div>
+   <svg id="worldmap" width="370" height="390">
+  </svg>
+  </main>
+  <script src="script.js"></script>
+  </body>
+</html>
