@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&family=Palatino&display=swap');
+
+:root {
+  --bg-body: #f6f2ea;       
+  --bg-page: #fdfbf7;       
+
+  --italy-col1: #737f52;
+  --italy-col2: #c86f48;        
+  --italy-col3: #b9b2a8;    
+  
+  --text-muted: #746d64;    
+
+  --border-soft: rgba(120, 100, 80, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Palatino",serif;
+  background:
+    /* leichte „Papier“-Textur / Körnung */
+    radial-gradient(circle at 10% 0, rgba(200, 180, 150, 0.28), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(167, 180, 152, 0.22), transparent 65%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0, transparent 40%, transparent 100%),
+    var(--bg-body);
+  padding: 1.5rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 90px; 
+    overflow: hidden; 
+    background: rgba(73, 151, 208, 0.7);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.7rem;
+}
+
+nav a {
+  font-family:"Nunito",sans-serif;
+  margin: 0px 5px;
+  text-decoration:none;
+  color: white;
+}
+
+#act {
+  color:navy;
+  height:20px;
+}
+
+.page {
+  width: 100%;
+  max-width: 780px;
+  margin: 85px auto 0 auto;
+  padding: 2.25rem 1.9rem 2.4rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 246, 239, 0.96));
+  border-radius: 1.3rem;
+  border: 1px solid rgba(140, 120, 95, 0.18);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ganz feine „Faser“-Struktur im Page-Hintergrund */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(120deg, rgba(160, 140, 110, 0.07) 0.5px, transparent 0.5px),
+    linear-gradient(210deg, rgba(180, 170, 150, 0.06) 0.7px, transparent 0.7px);
+  background-size: 9px 9px, 13px 13px;
+  opacity: 0.35;
+}
+
+.page > * {
+  position: relative; /* damit Inhalt über der Textur liegt */
+}
+
+/* Header */
+
+.page-header {
+  font-size: 0.8rem;
+  border-left: 3px solid var(--italy-col1);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* kleiner Farbbalken als Header-Akzent */
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: -0.35rem;
+  left: 1rem;
+  width: 60px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--italy-col1), var(--italy-col2));
+  opacity: 0.9;
+}
+
+.page-header .label {
+  font-family:"Nunito",sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--italy-col2);
+  margin-bottom: 0.4rem;
+}
+
+.page-header .title {
+  font-size: 1.6rem;
+  font-weight:400;
+  margin: 0 0 0.5rem;
+  color: var(--italy-col1);
+}
+
+.page-header .subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight:300;
+  color: var(--text-muted);
+}
+
+/* Person */
+
+.person-card {
+  font-size:0.8rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-soft);
+  padding: 1rem 1.1rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(250, 246, 239, 0.98));
+  margin-bottom: 1.9rem;
+}
+
+.person-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.person-name {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight:400;
+  color: #333;
+}
+
+.person-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* kleine „Tags“ statt nur Bulletpoints */
+.person-meta span {
+  position: relative;
+  padding-left: 0.85rem;
+}
+
+.person-meta span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--italy-col2);
+  opacity: 0.9;
+}
+
+.person-text {
+  margin: 0.3rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Timeline */
+
+.timeline {
+  border-top: 1px solid rgba(140, 120, 95, 0.18);
+  padding-top: 1.1rem;
+  position: relative;
+}
+
+/* vertikale Leitlinie für den Tag */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 1.4rem;
+  bottom: 0.2rem;
+  width: 1px;
+  background: var(--italy-col1);
+  opacity: 0.7;
+}
+
+.time-block {
+  padding: 0.9rem 0 0.9rem 1.4rem;
+  border-bottom: 1px solid rgba(140, 120, 95, 0.14);
+  position: relative;
+}
+
+.time-block:last-of-type {
+  border-bottom: none;
+}
+
+/* kleiner Punkt an der Zeit-Achse */
+.time-block::before {
+  content: "";
+  position: absolute;
+  left: 0.09rem;
+  top: 1.05rem;
+  width: 0.52rem;
+  height: 0.52rem;
+  border-radius: 999px;
+  background: var(--italy-col1);
+}
+
+.time-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ICON B: Uhr-Symbol → kleine grafische Form vor der Zeit */
+.time-label {
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--italy-col1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.time-label::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--italy-col1);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+
+/* kleiner Zeiger im „Kreis“ */
+.time-label::after {
+  content: "";
+  position: absolute;
+  width: 0.36rem;
+  height: 1px;
+  background: var(--italy-col1);
+  transform-origin: left center;
+  transform: translateX(0.17rem) rotate(35deg);
+  opacity: 0.9;
+}
+
+/* ICON B: Ort-Symbol → kleines Quadrat vor dem Ort */
+.time-location {
+  font-size: 0.82rem;
+  color: var(--italy-col3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.time-location::before {
+  content: "";
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 2px;
+  border: 1px solid rgba(185, 178, 168, 0.9);
+  background:rgba(250, 246, 239, 0.9);
+}
+
+/* Text des Moments */
+
+.time-text {
+  margin: 0;
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+  nav {
+    font-size:1.2rem;
+  }
+}
+@media (max-width: 570px) {
+  body {
+    padding: 0.9rem;
+  }
+  nav {
+    font-size:0.86rem;
+  }
+  .page {
+    padding: 1.7rem 1.3rem 2rem;
+  }
+
+  .page-header {
+    border-left-width: 2px;
+  }
+
+  .page-header .title {
+    font-size: 1.2rem;
+  }
+
+  .timeline::before {
+    left: 0.25rem;
+  }
+
+  .time-block {
+    padding-left: 1.3rem;
+  }
+
+  .time-block::before {
+    left: 0.02rem;
+  }
+}
