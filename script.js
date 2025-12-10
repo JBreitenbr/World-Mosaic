@@ -1,9 +1,8 @@
-   const svg = d3.select("#worldmap");
-    const width = +svg.attr("width");
-    const height = +svg.attr("height");
-    let toolTip=d3.select("#tooltip");
-    // Projektion (kannst du später beliebig ändern)
-    const projection = d3.geoNaturalEarth1()
+const svg = d3.select("#worldmap");
+const width = +svg.attr("width");
+const height = +svg.attr("height");
+let toolTip=d3.select("#tooltip");
+const projection = d3.geoNaturalEarth1()
       .translate([width / 2.35, height / 3])
       .scale(90);
 let arr=
@@ -37,7 +36,7 @@ let arr=
           .attr("stroke", "#333") // dezente Grenzen
           .attr("stroke-width", 0.5);   
       let mouseover=(d,i)=>{
-     toolTip.style("visibility","visible").style("top",event.pageY+50+"px").style("left",event.pageX+20+"px").html("Land: "+i["country"]+"<br>"+"Stadt: "+i["city"]+"<br>"+"Einwohner: "+i["population"]+"<br><br>"+"Datum : "+new Date().toLocaleDateString('de-DE',{timeZone:i["tz"]})+"<br>"+"Uhrzeit: "+new Date().toLocaleTimeString('de-DE',{timeZone:i["tz"]}));
+     toolTip.style("visibility","visible").style("top",event.pageY-30+"px").style("left",width/2+20+"px").html("Land: "+i["country"]+"<br>"+"Stadt: "+i["city"]+"<br>"+"Einwohner: "+i["population"]+"<br><br>"+"Datum : "+new Date().toLocaleDateString('de-DE',{timeZone:i["tz"]})+"<br>"+"Uhrzeit: "+new Date().toLocaleTimeString('de-DE',{timeZone:i["tz"]}));
       }
         svg.selectAll("circle").data(arr).enter().append("circle").attr("cx",(item)=>projection([item["lon"],item["lat"]])[0]).attr("cy",(item)=>projection([item["lon"],item["lat"]])[1]).attr("r",2).attr("fill","#714342").attr("stroke","#000").attr("opacity",0.7).attr("stroke-width",0.5).on("mouseover",mouseover).on("mouseleave",()=>{toolTip.style("visibility","hidden")});
       })
