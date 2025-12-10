@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&family=Palatino&display=swap');
+:root {
+  --bg-body: #f8edea;       
+  --bg-page: #f5e7f1;       
+  --text-muted: #746d64;    
+
+  --border-soft: rgba(120, 100, 80, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Palatino",serif;
+  background:
+    /* leichte „Papier“-Textur / Körnung */
+    radial-gradient(circle at 10% 0, rgba(200, 180, 150, 0.28), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(167, 180, 152, 0.22), transparent 65%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0, transparent 40%, transparent 100%),
+    var(--bg-body);
+  padding: 1.5rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 90px; 
+    overflow: hidden; 
+    background: rgba(73, 151, 208, 0.7);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.7rem;
+}
+
+nav a {
+  font-family:"Nunito",sans-serif;
+  margin: 0px 5px;
+  text-decoration:none;
+  color: white;
+}
+
+#act {
+  color:navy;
+  height:20px;
+}
+
+.page {
+  width: 100%;
+  max-width: 780px;
+  margin: 85px auto 0 auto;
+  padding: 2.25rem 1.9rem 2.4rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 246, 239, 0.96));
+  border-radius: 1.3rem;
+  border: 1px solid rgba(140, 120, 95, 0.18);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+#toggle {
+  visibility:visible;
+}
+span {
+      font-size:1.5rem;
+}
+#day-rhythm {
+  font-size:1rem;
+}
+p {
+      color: var(--text-muted);  
+      margin: 0.3rem 0.3rem 1.3rem 0.3rem;
+      font-size: 0.82rem;
+}
+#tooltip { 
+  border: 1px solid #21234a;
+  color: #21234a;
+  text-align: left;
+  background-color:#fff7eb;
+  position: absolute;
+  font-size:0.6rem;
+  padding: 0.8rem;
+  border-radius: 1.2rem;
+  transform: translate(0,-50px);
+  visibility: hidden;
+  border: 1px solid black;
+}
+   main {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+   }
+
+    svg {
+      max-width: 90vw;
+      max-height: 80vh;
+      width: 390px;
+      height: 370px;
+    }
+
+    #world {
+       text-align: center;
+    }
+   
+   /* #worldmap {
+       border: 1px solid black;
+    }*/
+  
+/* Responsive */
+@media (max-width: 1050px) {
+  nav {
+    font-size:1.2rem;
+  }
+}
+@media (max-width: 570px) {
+  body {
+    padding: 0.9rem;
+  }
+  /*#toggle {
+    visibility:hidden;
+  }*/
+  nav {
+    font-size:0.86rem;
+  }
+  .page {
+    padding: 1.7rem 1.3rem 2rem;
+  }
+}
